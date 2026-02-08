@@ -17,11 +17,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node
-        # ここを修正しました（node-latest → setup-node@v4）
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # cache: 'npm'  ← この行を削除しました
 
       - name: Install dependencies
         run: npm install
